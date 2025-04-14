@@ -1,4 +1,4 @@
-FROM base:latest
+FROM ghcr.io/nawramm/images/base:latest
 
 USER root
 
