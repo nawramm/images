@@ -59,7 +59,7 @@ jobs:
       - name: Export digest
         run: |
           mkdir -p ${{ runner.temp }}/digests/base
-          digest="${{ steps.build.outputs.digest }}"
+          digest="${{ steps.build-base.outputs.digest }}"
           touch "${{ runner.temp }}/digests/base/${digest#sha256:}"
 
       - name: Upload digest
