@@ -37,6 +37,7 @@ jobs:
           context: "{{defaultContext}}:images/base"
           platforms: linux/amd64,linux/arm64
           push: true
+          file: "base.Dockerfile"
           tags: ghcr.io/${{github.repository}}/base:latest
       
       - name: Build and push seng201
@@ -45,5 +46,5 @@ jobs:
           context: "{{defaultContext}}:images/seng201"
           platforms: linux/amd64,linux/arm64
           push: true
+          file: "seng201.Dockerfile"
           tags: ghcr.io/${{github.repository}}/seng201:latest
-
