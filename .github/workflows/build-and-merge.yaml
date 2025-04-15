@@ -88,11 +88,12 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          image: ghcr.io/${{ github.repository }}/${{ inputs.image }}
-          tags:
+          images: ghcr.io/${{ github.repository }}/${{ inputs.image }}
+          tags: |
             latest
             ${{ github.sha }}
             ${{ github.ref_name }}
+
       - name: Create manifest list and push
         working-directory: ${{ runner.temp }}/digests/${{ inputs.image }}
         shell: bash
