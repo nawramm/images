@@ -65,6 +65,7 @@ jobs:
           retention-days: 1
 
   merge:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download digests
