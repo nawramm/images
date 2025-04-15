@@ -26,3 +26,10 @@ jobs:
     with:
       image: seng201
     secrets: inherit
+  
+  build-cosc261:
+    needs: build-base
+    uses: ./.github/workflows/build-and-merge.yaml
+    with:
+      image: cosc261
+    secrets: inherit
